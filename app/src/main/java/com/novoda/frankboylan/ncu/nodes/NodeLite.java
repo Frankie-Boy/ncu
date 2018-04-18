@@ -4,7 +4,7 @@ import java.util.List;
 
 class NodeLite { // ToDo: Extend Node
 
-    private int nodeId;
+    private NodeId nodeId;
 
     private NodeStatus nodeStatus;
 
@@ -12,11 +12,11 @@ class NodeLite { // ToDo: Extend Node
 
     private List<NodeId> childrenList;
 
-    public int getNodeId() {
+    public NodeId getNodeId() {
         return nodeId;
     }
 
-    public void setNodeId(int nodeId) {
+    public void setNodeId(NodeId nodeId) {
         this.nodeId = nodeId;
     }
 
