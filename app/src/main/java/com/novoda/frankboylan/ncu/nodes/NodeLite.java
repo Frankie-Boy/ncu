@@ -12,6 +12,8 @@ class NodeLite { // ToDo: Extend Node
 
     private List<NodeId> childrenList;
 
+    private int posX;
+
     public NodeId getNodeId() {
         return nodeId;
     }
@@ -42,5 +44,13 @@ class NodeLite { // ToDo: Extend Node
 
     public void setChildrenList(List<NodeId> childrenList) {
         this.childrenList = childrenList;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
     }
 }
