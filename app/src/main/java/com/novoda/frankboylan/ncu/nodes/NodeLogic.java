@@ -8,7 +8,7 @@ public class NodeLogic {
         return new Gson().fromJson(json, NodeMap.class);
     }
 
-    public boolean areChildrenValid(NodeMap nodeMap) {
+    public boolean isChildCountValid(NodeMap nodeMap) {
         for (Layer layer : nodeMap.getLayerList()) {
             for (NodeLite node : layer.getNodeList()) {
                 int childrenCount = node.getChildrenList().size();

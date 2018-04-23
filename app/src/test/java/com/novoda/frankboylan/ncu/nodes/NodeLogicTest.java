@@ -24,18 +24,18 @@ public class NodeLogicTest {
     @Test
     public void givenNodeHasZeroChildren_whenLogicApplied_thenReturnsTrue() {
         nodeMap = nodeLogic.getNodeMapFromJsonString(JSON_ZERO_CHILDREN);
-        assertTrue(nodeLogic.areChildrenValid(nodeMap));
+        assertTrue(nodeLogic.isChildCountValid(nodeMap));
     }
 
     @Test
     public void givenNodeHasOneChild_whenLogicApplied_thenReturnsTrue() {
         nodeMap = nodeLogic.getNodeMapFromJsonString(JSON_ONE_CHILD);
-        assertTrue(nodeLogic.areChildrenValid(nodeMap));
+        assertTrue(nodeLogic.isChildCountValid(nodeMap));
     }
 
     @Test
     public void givenNodeHasThreeChildren_whenLogicApplied_thenReturnsFalse() {
         nodeMap = nodeLogic.getNodeMapFromJsonString(JSON_THREE_CHILDREN);
-        assertFalse(nodeLogic.areChildrenValid(nodeMap));
+        assertFalse(nodeLogic.isChildCountValid(nodeMap));
     }
 }
