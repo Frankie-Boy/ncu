@@ -11,7 +11,7 @@ public class NodeMap {
     private Metadata metadata;
 
     @SerializedName("layers")
-    private List<Layers> layersList = new ArrayList<>();
+    private List<Layer> layerList = new ArrayList<>();
 
     public Metadata getMetadata() {
         return metadata;
@@ -21,11 +21,11 @@ public class NodeMap {
         this.metadata = metadata;
     }
 
-    public List<Layers> getLayersList() {
-        return layersList;
+    public List<Layer> getLayerList() {
+        return layerList;
     }
 
-    public void setLayersList(List<Layers> layersList) {
-        this.layersList = layersList;
+    public void setLayerList(List<Layer> layerList) {
+        this.layerList = layerList;
     }
 }
