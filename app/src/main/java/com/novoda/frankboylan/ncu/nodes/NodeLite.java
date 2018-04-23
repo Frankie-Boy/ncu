@@ -1,24 +1,32 @@
 package com.novoda.frankboylan.ncu.nodes;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
 import java.util.List;
 
 class NodeLite { // ToDo: Extend Node
 
-    private NodeId nodeId;
+    @SerializedName("node-id")
+    private String nodeId;
 
+    @SerializedName("node-status")
     private NodeStatus nodeStatus;
 
-    private List<NodeId> parentList;
+    @SerializedName("parent")
+    private List<NodeId> parentList = new ArrayList<>();
 
-    private List<NodeId> childrenList;
+    @SerializedName("children")
+    private List<NodeId> childrenList = new ArrayList<>();
 
+    @SerializedName("pos-x")
     private int posX;
 
-    public NodeId getNodeId() {
+    public String getNodeId() {
         return nodeId;
     }
 
-    public void setNodeId(NodeId nodeId) {
+    public void setNodeId(String nodeId) {
         this.nodeId = nodeId;
     }
 

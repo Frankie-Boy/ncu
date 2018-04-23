@@ -1,12 +1,17 @@
 package com.novoda.frankboylan.ncu.nodes;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
 import java.util.List;
 
-class Layer {
+class Layers {
 
+    @SerializedName("layer-number")
     private int layerNumber;
 
-    private List<NodeLite> nodeList;
+    @SerializedName("nodes")
+    private List<NodeLite> nodeList = new ArrayList<>();
 
     public int getLayerNumber() {
         return layerNumber;

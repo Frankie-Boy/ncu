@@ -1,9 +1,15 @@
 package com.novoda.frankboylan.ncu.nodes;
 
+import com.google.gson.Gson;
+
 public class NodeLogic {
 
-    private NodeLite node;
+    public NodeMap getNodeMapFromJsonString(String json) {
+        return new Gson().fromJson(json, NodeMap.class);
+    }
 
-    private Layer layer;
-
+    public boolean areChildrenValid(NodeMap nodeMap) {
+        //TODO: Parse nodemap check children count
+        return false;
+    }
 }
