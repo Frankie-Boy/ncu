@@ -9,7 +9,14 @@ public class NodeLogic {
     }
 
     public boolean areChildrenValid(NodeMap nodeMap) {
-        //TODO: Parse nodemap check children count
-        return false;
+        for (Layer layer : nodeMap.getLayerList()) {
+            for (NodeLite node : layer.getNodeList()) {
+                int childrenCount = node.getChildrenList().size();
+                if (childrenCount > 2) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
