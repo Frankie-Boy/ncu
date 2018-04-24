@@ -19,4 +19,13 @@ public class NodeLogic {
         }
         return true;
     }
+
+    public boolean isLayerNodeCountValid(NodeMap nodeMap) {
+        for (Layer layer : nodeMap.getLayerList()) {
+            if (layer.getNodeList().size() == 0 || layer.getNodeList().size() > 3) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

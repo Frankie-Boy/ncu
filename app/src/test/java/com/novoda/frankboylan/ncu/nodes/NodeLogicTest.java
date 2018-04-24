@@ -66,5 +66,4 @@ public class NodeLogicTest {
         nodeMap = nodeLogic.getNodeMapFromJsonString(JSON_LAYER_FOUR_NODES);
         assertFalse(nodeLogic.isLayerNodeCountValid(nodeMap));
     }
-
 }
