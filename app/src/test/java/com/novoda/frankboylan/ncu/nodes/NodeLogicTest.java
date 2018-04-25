@@ -67,6 +67,8 @@ public class NodeLogicTest {
         assertFalse(nodeLogic.isLayerNodeCountValid(nodeMap));
     }
 
+    // TODO: Test that each node has 1-2 parent(s)
+
     // TODO: Test the children of each node have layer-no's that are > (by 1-2) than the current layer-no
 
     // TODO: Test the parent of each node have layer-no's that are < (by 1-2) than the current layer-no
