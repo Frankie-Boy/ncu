@@ -66,4 +66,10 @@ public class NodeLogicTest {
         nodeMap = nodeLogic.getNodeMapFromJsonString(JSON_LAYER_FOUR_NODES);
         assertFalse(nodeLogic.isLayerNodeCountValid(nodeMap));
     }
+
+    // TODO: Test the children of each node have layer-no's that are > (by 1-2) than the current layer-no
+
+    // TODO: Test the parent of each node have layer-no's that are < (by 1-2) than the current layer-no
+
+    // TODO: Test the root (id: 0) has 1-3 children
 }

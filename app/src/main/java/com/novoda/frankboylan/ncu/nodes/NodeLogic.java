@@ -28,4 +28,6 @@ public class NodeLogic {
         }
         return true;
     }
+
+    // TODO: To avoid constantly nesting, have a method to map data to a database (Room & RxJava)
 }
