@@ -67,11 +67,47 @@ public class NodeLogicTest {
         assertFalse(nodeLogic.isLayerNodeCountValid(nodeMap));
     }
 
-    // TODO: Test that each node has 1-2 parent(s)
+    @Test
+    public void givenNodeHasZeroParents_whenLogicApplied_thenReturnsFalse() {
+        nodeMap = nodeLogic.getNodeMapFromJsonString();
+        assertFalse(nodeLogic.isParentCountValid(nodeMap));
+    }
+
+    @Test
+    public void givenNodeHasOneParent_whenLogicApplied_thenReturnsTrue() {
+        nodeMap = nodeLogic.getNodeMapFromJsonString();
+        assertFalse(nodeLogic.isParentCountValid(nodeMap));
+    }
+
+    @Test
+    public void givenNodeHasTwoParents_whenLogicApplied_thenReturnsTrue() {
+        nodeMap = nodeLogic.getNodeMapFromJsonString();
+        assertFalse(nodeLogic.isParentCountValid(nodeMap));
+    }
+
+    @Test
+    public void givenNodeHasThreeParents_whenLogicApplied_thenReturnsFalse() {
+        nodeMap = nodeLogic.getNodeMapFromJsonString();
+        assertFalse(nodeLogic.isParentCountValid(nodeMap));
+    }
 
     // TODO: Test the children of each node have layer-no's that are > (by 1-2) than the current layer-no
 
     // TODO: Test the parent of each node have layer-no's that are < (by 1-2) than the current layer-no
 
     // TODO: Test the root (id: 0) has 1-3 children
+
+    // TODO: Test that the Parent of a Node's X-column is +/- 2
+
+    // TODO: Node Status testing:
+    /* Unlocked:    An unlocked Node must have atleast 1 Parent with a Node Status of Complete
+
+       Locked:
+
+       In Progress:
+
+       Completed:   
+
+
+     */
 }
