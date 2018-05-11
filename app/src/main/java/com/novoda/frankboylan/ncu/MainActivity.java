@@ -3,7 +3,7 @@ package com.novoda.frankboylan.ncu;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.novoda.frankboylan.ncu.nodes.NodeLogic;
+import com.novoda.frankboylan.ncu.nodes.NodeMapSanitisation;
 import com.novoda.frankboylan.ncu.nodes.NodeMap;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        NodeLogic nodeLogic = new NodeLogic();
+        NodeMapSanitisation nodeMapSanitisation = new NodeMapSanitisation();
 
-        nodeMap = nodeLogic.getNodeMapFromJsonString(JSON_STRING_TEMP);
+        nodeMap = nodeMapSanitisation.getNodeMapFromJsonString(JSON_STRING_TEMP);
     }
 }
