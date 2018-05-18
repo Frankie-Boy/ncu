@@ -1,14 +1,15 @@
 package com.novoda.frankboylan.ncu.nodes;
 
-import com.google.gson.Gson;
 
 public class NodeMapSanitisation {
 
-    public NodeMap getNodeMapFromJsonString(String json) {
-        return new Gson().fromJson(json, NodeMap.class);
+    private NodeMap nodeMap;
+
+    public NodeMapSanitisation(NodeMap nodeMap) {
+        this.nodeMap = nodeMap;
     }
 
-    public boolean isChildCountValid(NodeMap nodeMap) {
+    boolean isChildCountValid() {
         for (Layer layer : nodeMap.getLayerList()) {
             for (NodeLite node : layer.getNodeList()) {
                 int childrenCount = node.getChildrenList().size();
@@ -20,7 +21,7 @@ public class NodeMapSanitisation {
         return true;
     }
 
-    public boolean isLayerNodeCountValid(NodeMap nodeMap) {
+    boolean isLayerNodeCountValid() {
         for (Layer layer : nodeMap.getLayerList()) {
             if (layer.getNodeList().size() == 0 || layer.getNodeList().size() > 3) {
                 return false;

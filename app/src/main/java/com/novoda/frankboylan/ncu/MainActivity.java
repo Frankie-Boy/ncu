@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        NodeMapSanitisation nodeMapSanitisation = new NodeMapSanitisation();
+        //NodeMapSanitisation nodeMapSanitisation = new NodeMapSanitisation();
 
-        nodeMap = nodeMapSanitisation.getNodeMapFromJsonString(JSON_STRING_TEMP);
+        //nodeMap = nodeMapSanitisation.getNodeMapFromJsonString(JSON_STRING_TEMP);
     }
 }
