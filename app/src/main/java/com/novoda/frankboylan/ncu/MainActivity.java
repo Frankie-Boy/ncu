@@ -2,8 +2,8 @@ package com.novoda.frankboylan.ncu;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
-import com.novoda.frankboylan.ncu.nodes.NodeMapSanitisation;
 import com.novoda.frankboylan.ncu.nodes.NodeMap;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,8 +20,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        //NodeMapSanitisation nodeMapSanitisation = new NodeMapSanitisation();
 
-        //nodeMap = nodeMapSanitisation.getNodeMapFromJsonString(JSON_STRING_TEMP);
+        JsonFileReader reader = new JsonFileReader();
+
+        nodeMap = reader.readNodeMap("JsonZeroChildren.txt");
+
+        Log.d("SearchThis", nodeMap.getMetadata() + "");
     }
 }
