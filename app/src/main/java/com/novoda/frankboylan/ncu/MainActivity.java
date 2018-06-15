@@ -22,10 +22,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        JsonFileReader reader = new JsonFileReader();
+        FileReader reader = new FileReader();
         AssetManager assetManager = getAssets();
 
-        nodeMap = reader.readNodeMap(assetManager, "JsonZeroChildren.txt");
+        String jsonData = reader.readFile("JsonZeroChildren.txt");
+
+        // ToDo: Create the creator :o
+
+        NodeMapCreator nodeMapCreator = new NodeMapCreator();
+        nodeMap = nodeMapCreator.createFromJsonString(jsonData);
 
         Log.d("SearchThis", nodeMap.getMetadata() + "");
     }
