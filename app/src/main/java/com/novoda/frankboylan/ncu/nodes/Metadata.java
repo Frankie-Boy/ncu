@@ -1,6 +1,6 @@
 package com.novoda.frankboylan.ncu.nodes;
 
-public class Metadata {
+class Metadata {
     
     private String title;
 
@@ -10,5 +10,12 @@ public class Metadata {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Metadata{" +
+                "title='" + title + '\'' +
+                '}';
     }
 }

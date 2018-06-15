@@ -1,7 +1,7 @@
 package com.novoda.frankboylan.ncu.nodes;
 
 
-public class NodeMapSanitisation {
+class NodeMapSanitisation {
 
     private NodeMap nodeMap;
 
@@ -30,5 +30,5 @@ public class NodeMapSanitisation {
         return true;
     }
 
-    // TODO: To avoid constantly nesting, have a method to map data to a database (Room & RxJava)
+    // TODO: To avoid constantly reading each layer of the nodemap, this should be done once and entered into a data structure in a database (Room & RxJava?)
 }

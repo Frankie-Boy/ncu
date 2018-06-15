@@ -1,5 +1,6 @@
 package com.novoda.frankboylan.ncu;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         JsonFileReader reader = new JsonFileReader();
+        AssetManager assetManager = getAssets();
 
-        nodeMap = reader.readNodeMap("JsonZeroChildren.txt");
+        nodeMap = reader.readNodeMap(assetManager, "JsonZeroChildren.txt");
 
         Log.d("SearchThis", nodeMap.getMetadata() + "");
     }
