@@ -1,8 +1,8 @@
 package com.novoda.frankboylan.ncu;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import com.novoda.frankboylan.ncu.nodes.NodeMap;
 
@@ -19,21 +19,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("SearchThis", "onStart");
 
-        FileReader reader = new FileReader();
+        FileReader fileReader = new FileReader();
+        AssetManager assetManager = this.getAssets();
 
-        String jsonData = reader.readFile("JsonZeroChildren.txt");
-        Log.d("SearchThis", jsonData);
+        String jsonData = fileReader.readFile(assetManager, "JsonZeroChildren.txt");
 
         FileValidator fileValidator = new FileValidator();
         String cleanjsonData = fileValidator.clean(jsonData);
 
-        // ToDo: Create the creator :o
-
         NodeMapCreator nodeMapCreator = new NodeMapCreator();
         NodeMap nodeMap = nodeMapCreator.createFromJsonString(cleanjsonData);
-
-        Log.d("SearchThis", nodeMap.getMetadata() + "");
     }
 }
