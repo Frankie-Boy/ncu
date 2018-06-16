@@ -3,10 +3,13 @@ package com.novoda.frankboylan.ncu;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.novoda.frankboylan.ncu.nodes.NodeMap;
 
 public class MainActivity extends AppCompatActivity {
+
+    private NodeMap nodeMap;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,18 @@ public class MainActivity extends AppCompatActivity {
         String cleanjsonData = fileValidator.clean(jsonData);
 
         NodeMapCreator nodeMapCreator = new NodeMapCreator();
-        NodeMap nodeMap = nodeMapCreator.createFromJsonString(cleanjsonData);
+        nodeMap = nodeMapCreator.createFromJsonString(cleanjsonData);
+    }
+
+    public void printDatabase(View view) {
+    }
+
+    public void loadUnbalancedNodeMap(View view) {
+    }
+
+    public void loadBalancedNodeMap(View view) {
+    }
+
+    public void validateNodeMap(View view) {
     }
 }
