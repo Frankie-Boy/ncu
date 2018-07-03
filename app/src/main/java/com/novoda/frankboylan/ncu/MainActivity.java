@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.novoda.frankboylan.ncu.nodes.NodeMap;
+import com.novoda.frankboylan.ncu.ktnodes.NodeMap;
 
 public class MainActivity extends AppCompatActivity {
 
     private NodeMap nodeMap;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         FileReader fileReader = new FileReader();
         AssetManager assetManager = this.getAssets();
 
-        String jsonData = fileReader.readFile(assetManager, "JsonZeroChildren.txt");
+        String jsonData = fileReader.readFile(assetManager, "dataset_main.txt");
 
         FileValidator fileValidator = new FileValidator();
         String cleanjsonData = fileValidator.clean(jsonData);
