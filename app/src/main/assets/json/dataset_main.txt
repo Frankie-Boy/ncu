@@ -1,0 +1,147 @@
+{
+   "metadata": {
+      "title": "Android",
+      "department-code": "AND",
+      "colour-hex": "4444FF"
+   },
+   "layers": [
+   {
+      "layer-number": "0",
+      "nodes": [{
+         "node-id": "0",
+         "node-status": "UNLOCKED",
+         "pos-x": "2",
+         "parents": [],
+         "children": [{"node-id": "1"}, {"node-id": "2"}, {"node-id": "3"}]
+      }]
+   }, {
+      "layer-number": "1",
+      "nodes": [{
+         "node-id": "1",
+         "node-status": "LOCKED",
+         "pos-x": "0",
+         "parents": [{"node-id": "0"}],
+         "children": [{"node-id": "4"}]
+      },{
+         "node-id": "2",
+         "node-status": "LOCKED",
+         "pos-x": "2",
+         "parents": [{"node-id": "0"}],
+         "children": [{"node-id": "4"}]
+      },{
+         "node-id": "3",
+         "node-status": "LOCKED",
+         "pos-x": "4",
+         "parents": [{"node-id": "0"}],
+         "children": [{"node-id": "5"}]
+      }]
+   }, {
+      "layer-number": "2",
+      "nodes": [{
+         "node-id": "4",
+         "node-status": "LOCKED",
+         "pos-x": "1",
+         "parents": [{"node-id": "1"}, {"node-id": "2"}],
+         "children": [{"node-id": "6"}]
+      },{
+         "node-id": "5",
+         "node-status": "LOCKED",
+         "pos-x": "4",
+         "parents": [{"node-id": "3"}],
+         "children": [{"node-id": "7"}]
+      }]
+   }, {
+      "layer-number": "3",
+      "nodes": [{
+         "node-id": "6",
+         "node-status": "LOCKED",
+         "pos-x": "0",
+         "parents": [{"node-id": "4"}],
+         "children": [{"node-id": "8"}]
+      },{
+         "node-id": "7",
+         "node-status": "LOCKED",
+         "pos-x": "3",
+         "parents": [{"node-id": "5"}],
+         "children": [{"node-id": "9"}]
+      }]
+   }, {
+      "layer-number": "4",
+      "nodes": [{
+         "node-id": "8",
+         "node-status": "LOCKED",
+         "pos-x": "0",
+         "parents": [{"node-id": "6"}],
+         "children": [{"node-id": "10"}]
+      },{
+         "node-id": "9",
+         "node-status": "LOCKED",
+         "pos-x": "3",
+         "parents": [{"node-id": "7"}],
+         "children": [{"node-id": "10"}]
+      }]
+   }, {
+      "layer-number": "5",
+      "nodes": [{
+         "node-id": "10",
+         "node-status": "LOCKED",
+         "pos-x": "2",
+         "parents": [{"node-id": "8"}, {"node-id": "9"}],
+         "children": [{"node-id": "11"}, {"node-id": "12"}]
+      }]
+   }, {
+      "layer-number": "6",
+      "nodes": [{
+         "node-id": "11",
+         "node-status": "LOCKED",
+         "pos-x": "1",
+         "parents": [{"node-id": "10"}],
+         "children": [{"node-id": "13"}]
+      },{
+         "node-id": "12",
+         "node-status": "LOCKED",
+         "pos-x": "3",
+         "parents": [{"node-id": "10"}],
+         "children": [{"node-id": "14"}]
+      }]
+   }, {
+      "layer-number": "7",
+      "nodes": [{
+         "node-id": "13",
+         "node-status": "LOCKED",
+         "pos-x": "10",
+         "parents": [{"node-id": "11"}],
+         "children": [{"node-id": "15"}]
+      },{
+         "node-id": "14",
+         "node-status": "LOCKED",
+         "pos-x": "4",
+         "parents": [{"node-id": "12"}],
+         "children": [{"node-id": "16"}]
+      }]
+   }, {
+      "layer-number": "8",
+      "nodes": [{
+         "node-id": "15",
+         "node-status": "LOCKED",
+         "pos-x": "1",
+         "parents": [{"node-id": "13"}],
+         "children": [{"node-id": "17"}]
+      },{
+         "node-id": "16",
+         "node-status": "LOCKED",
+         "pos-x": "3",
+         "parents": [{"node-id": "14"}],
+         "children": [{"node-id": "17"}]
+      }]
+   }, {
+      "layer-number": "9",
+      "nodes": [{
+         "node-id": "17",
+         "node-status": "LOCKED",
+         "pos-x": "2",
+         "parents": [{"node-id": "15"}, {"node-id": "16"}],
+         "children": []
+      }]
+   }]
+}
