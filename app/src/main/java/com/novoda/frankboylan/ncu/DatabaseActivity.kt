@@ -37,6 +37,7 @@ class DatabaseActivity : AppCompatActivity() {
         btn_save.setOnClickListener { saveJourneyProgress() }
     }
 
+    // Temporary method that adds dataset_main.txt to the new Room database
     private fun saveJourneyProgress() {
         Thread {
 
