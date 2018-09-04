@@ -110,7 +110,7 @@
       "nodes": [{
          "node-id": "13",
          "node-status": "LOCKED",
-         "pos-x": "10",
+         "pos-x": "1",
          "parents": [{"node-id": "11"}],
          "children": [{"node-id": "15"}]
       },{
