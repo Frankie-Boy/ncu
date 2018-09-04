@@ -1,5 +1,6 @@
 package com.novoda.frankboylan.ncu
 
+import android.content.Intent
 import android.content.res.AssetManager
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -19,10 +20,10 @@ class DatabaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_database)
 
-        DepartmentDatabase.destroyInstance()
-
         db = DepartmentDatabase.getInstance(this)
         Stetho.initializeWithDefaults(this)
+
+        db!!.metadataDao().getMetadata().departmentCode
 
         val fileReader = FileReader()
         val assetManager: AssetManager = this.assets
@@ -34,7 +35,13 @@ class DatabaseActivity : AppCompatActivity() {
 
         nodeMap = nodeMapCreator.createFromJsonString(cleanJson)
 
-        btn_save.setOnClickListener { saveJourneyProgress() }
+        btn_save.setOnClickListener {
+            if (db!!.metadataDao().getMetadata().departmentCode != nodeMap!!.metadata.departmentCode) {
+                saveJourneyProgress()
+            }
+            val intent = Intent(this, TreeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // Temporary method that adds dataset_main.txt to the new Room database
