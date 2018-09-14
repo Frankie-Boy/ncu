@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.facebook.stetho.Stetho
+import com.novoda.frankboylan.ncu.R.id.btn_save
 import com.novoda.frankboylan.ncu.datamodel.DepartmentDatabase
 import com.novoda.frankboylan.ncu.datamodel.NodeMap
 import com.novoda.frankboylan.ncu.datamodel.NodeRelationship
@@ -21,9 +22,16 @@ class DatabaseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_database)
 
         db = DepartmentDatabase.getInstance(this)
-        Stetho.initializeWithDefaults(this)
 
-        db!!.metadataDao().getMetadata().departmentCode
+//        if (db == null) {
+//            db = Room.databaseBuilder(applicationContext,
+//                    DepartmentDatabase::class.java, "NodeMap.db")
+//                    .allowMainThreadQueries() // ToDo: Remove and use Kotlin Coroutines
+//                    .build()
+//        }
+        db!!.metadataDao().insert(metadata = com.novoda.frankboylan.ncu.datamodel.Metadata("1","",0,""))
+
+        Stetho.initializeWithDefaults(this)
 
         val fileReader = FileReader()
         val assetManager: AssetManager = this.assets

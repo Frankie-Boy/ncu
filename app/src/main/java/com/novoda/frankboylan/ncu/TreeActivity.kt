@@ -19,15 +19,27 @@ class TreeActivity : AppCompatActivity() {
         linearLayout.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
 
         val node = ImageView(this)
-        node.setImageBitmap(drawNode())
+        node.setImageBitmap(drawNode(200, 200))
         node.layoutParams = LayoutParams(200, 200)
 
         linearLayout.addView(node)
 
+        val node2 = ImageView(this)
+        node2.setImageBitmap(drawNode(200, 200))
+        node2.layoutParams = LayoutParams(200, 200)
+
+        linearLayout.addView(node2)
+
+        val node3 = ImageView(this)
+        node3.setImageBitmap(drawNode(200, 200))
+        node3.layoutParams = LayoutParams(200, 200)
+
+        linearLayout.addView(node3)
+
         setContentView(linearLayout)
     }
 
-    private fun drawNode(): Bitmap {
+    private fun drawNode(posX: Int, posY: Int): Bitmap {
         val bitmap: Bitmap = Bitmap.createBitmap(
                 400,
                 400,
@@ -42,8 +54,8 @@ class TreeActivity : AppCompatActivity() {
         paint.isAntiAlias = true
 
         val radius = 50f
-        val cx = 50f
-        val cy = 50f
+        val cx = posX + 0f
+        val cy = posY + 0f
 
         canvas.drawCircle(cx, cy, radius, paint)
 
